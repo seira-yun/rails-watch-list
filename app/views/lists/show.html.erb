@@ -1,0 +1,18 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= "http://source.unsplash.com/featured/?#{@list.name}&#{rand(1000)}" %>);">
+  <div class="container">
+    <h1><%= @list.name %></h1>
+  </div>
+</div>
+<div class="container">
+  <div class="cards">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="card-trip mt-3">
+        <%= image_tag bookmark.movie.poster_url %>
+        <div class="card-trip-infos">
+          <h2><%= bookmark.movie.title %></h2>
+          <p><%= bookmark.movie.overview %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
