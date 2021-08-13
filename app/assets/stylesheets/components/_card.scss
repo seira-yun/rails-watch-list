@@ -1,3 +1,17 @@
+.circle {
+  background-color: grey;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+
+}
 .card-trip {
   overflow: hidden;
   background: white;

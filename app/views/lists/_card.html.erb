@@ -1,4 +1,4 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= "http://source.unsplash.com/featured/?#{list.name}&#{rand(1000)}" %>)">
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "http://source.unsplash.com/featured/?#{list.name}&#{rand(1000)}" %>)">
   <%= list.name %>
   <%= link_to '', list_path(list), class: 'card-link' %>
 </div>
